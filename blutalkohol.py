@@ -71,13 +71,13 @@ total_consumed_alc_in_gramm = consumed_alc_gramm_beer + consumed_alc_gramm_wine 
 blood_alc_level = round(((total_consumed_alc_in_gramm / (body_weight * body_liquid_share)) * 100), 2)
 
 # 3 output
-stating_blood_alc_level = f"Ihre Blutalkoholkonzentration beträgt {blood_alc_level} Promill. "
+statement_blood_alc_level = f"Ihre Blutalkoholkonzentration beträgt {blood_alc_level} Promill. "
 
 if blood_alc_level <= 0.1:
-    print(stating_blood_alc_level, "Ihre motorischen und geistigen Fähigkeiten sollten noch weitgehend uneingeschränkt sein :)")
+    print(statement_blood_alc_level, "Ihre motorischen und geistigen Fähigkeiten sollten noch weitgehend uneingeschränkt sein :)")
 elif blood_alc_level <= 0.3:
-    print(stating_blood_alc_level, "Ihre motorischen und geistigen Fähigkeiten sind eingeschränkt!")
+    print(statement_blood_alc_level, "Ihre motorischen und geistigen Fähigkeiten sind eingeschränkt!")
 elif blood_alc_level <= 1:
-    print(stating_blood_alc_level, "Lassen Sie sich lieber nach Hause bringen!")
+    print(statement_blood_alc_level, "Lassen Sie sich lieber nach Hause bringen!")
 elif blood_alc_level > 1:
-    print(stating_blood_alc_level, "Sie trinken gefährlich viel Alkohol.")
+    print(statement_blood_alc_level, "Sie trinken gefährlich viel Alkohol.")
