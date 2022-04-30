@@ -61,10 +61,10 @@ consumed_alc_gramm_beer = consumed_liters_of_beer * percentage_alc_beer
 consumed_alc_gramm_wine = consumed_liters_of_wine * percentage_alc_wine
 consumed_alc_gramm_liquor = consumed_liters_of_liquor * percentage_alc_liquor
 
-#calculate total consumed alc
+# calculate total consumed alc
 total_consumed_alc_in_gramm = consumed_alc_gramm_beer + consumed_alc_gramm_wine + consumed_alc_gramm_liquor
 
-#calculate blood alcohol level
+# calculate blood alcohol level
 blood_alc_level = round(((total_consumed_alc_in_gramm / (body_weight * body_liquid_share)) * 100), 2)
 
 # 3 output
