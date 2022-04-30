@@ -26,20 +26,23 @@ if "bier" in all_beverages:
     try:
         consumed_beer.value = float(input("Wie viele Flaschen Bier haben Sie getrunken?"))
     except ValueError:
-        print("Bitte geben Sie nur ganze Zahlen (nicht ausgeschrieben) ein!")
+        print("Bitte geben Sie nur Zahlen (nicht ausgeschrieben) ein!")
 if "wein" in all_beverages:
     try:
         consumed_wine.value = float(input("Wie viele Gläser Wein haben Sie getrunken?"))
     except ValueError:
-        print("Bitte geben Sie nur ganze Zahlen (nicht ausgeschrieben) ein!")
+        print("Bitte geben Sie nur Zahlen (nicht ausgeschrieben) ein!")
 if "schnaps" in all_beverages:
     try:
-        consumed_liquor.value = float(input("Wie viele Shots harten Alkohol haben Sie getrunken?"))
+        consumed_liquor.value = int(input("Wie viele Shots harten Alkohol haben Sie getrunken?"))
     except ValueError:
         print("Bitte geben Sie nur ganze Zahlen (nicht ausgeschrieben) ein!")
 
 # ask for body weight
-body_weight = float(input("Wie viele Kilogramm wiegen Sie?"))
+try:
+    body_weight = float(input("Wie viele Kilogramm wiegen Sie?"))
+except ValueError:
+    print("Bitte geben sie nur Zahlen (nicht ausgeschrieben) ein!")
 
 # ask for gender to get body-liquid-share
 gender = input("Sind Sie männlich (m), weiblich (w) oder keiner der beiden Kategorien zuzuordnen (d)?").lower()
